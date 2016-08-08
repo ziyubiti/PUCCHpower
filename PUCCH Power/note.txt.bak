@@ -1,0 +1,6 @@
+
+
+1、pusch:
+    默认重传开启，通过rvSeq的长度约束传输次数和对应RV取值，通过rvIdx更新传输次数变化（1-maxTx）； 
+    更新后将frc.PUSCH中的frc.PUSCH.RVSeq设为rvIdx值，frc.PUSCH.RV设为rvSeq(rvIdx);
+    若想关闭重传，则需要将rvSeq初始化时仅设置为1个RV值。  在frc = lteRMCUL(ue) 后，修改frc.PUSCH.RVSeq ;   
